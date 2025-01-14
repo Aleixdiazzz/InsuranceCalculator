@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/index.css" />
+    <script src="/script.js" type="javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAFE</title>
+  </head>
+  <body class="bg-green-50 content-center dark:bg-green-950 items-center">
+
+  <div class="absolute inset-0 -z-20">
+    <div class="absolute top-0 left-0 bg-[url('/media/Fast-car-amico.png')] bg-no-repeat bg-cover w-[500px] h-[500px]"></div>
+    <div class="absolute bottom-0 right-0 bg-[url('/media/Fast-car-bro.png')] bg-no-repeat bg-cover w-[500px] h-[500px]"></div>
+  </div>
+
+    <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center mt-20"><span class="mb-4 text-3xl font-extrabold text-green-500 md:text-5xl lg:text-6xl text-center my-5">SAFE</span> Auto Insurance</h1>
+
+
+    <form class="max-w-2xl mx-auto bg-white p-6 my-10 rounded-lg shadow-md space-y-4 dark:bg-gray-700">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl lg:text-4xl text-center">Get a Quote</h2>
+      <div class="w-full bg-gray-200 rounded-full h-0.5 dark:bg-gray-600">
+        <div id="progress-bar" class="bg-blue-600 h-0.5 rounded-full" style="width: 0%"></div>
+      </div>
+
+      <!-- Personal Details -->
+      <div id="personal-details">
+        <h4 class="text-lg font-bold text-gray-900 dark:text-white md:text-xl lg:text-lg my-3">Personal Details</h4>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="relative z-0 w-full mb-5 group">
+            <input type="text" name="firstname" id="firstname" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="firstname" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+          </div>
+          <div class="relative z-0 w-full mb-5 group">
+            <input type="text" name="lastname" id="lastname" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="lastname" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+          </div>
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+          <input type="email" name="email" id="email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="relative z-0 w-full mb-5 group">
+            <input type="tel" name="phone" id="phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number</label>
+          </div>
+          <div class="relative z-0 w-full mb-5 group">
+            <input type="text" name="dni" id="dni" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="dni" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">DNI</label>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="relative z-0 w-full mb-5 group">
+            <label for="sexo" class="sr-only">Sexo </label>
+            <div class="relative">
+              <select id="sexo"
+                      class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                <option selected>Sex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+              <svg class="absolute top-1/2 right-2 transform -translate-y-1/2 pointer-events-none w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <div class="relative z-0 w-full mb-5 group">
+            <input type="date" name="brithdate" id="brithdate" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
+            <label for="brithdate" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Birth Date</label>
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <button onclick="nextFormStep('personal-details')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Next
+          </button>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div id="address">
+        <div class="flex justify-start my-4">
+          <button onclick="previousFormStep('address')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Previous
+          </button>
+        </div>
+          <h4 class="text-lg font-bold text-gray-900 dark:text-white md:text-xl lg:text-lg my-3">Address Details</h4>
+
+        <div class="relative z-0 w-full mb-5 group">
+          <input type="text" name="street" id="street" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="street" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Street name</label>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="relative z-0 w-full mb-5 group">
+            <input type="text" name="streetNumber" id="streetNumber" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="streetNumber" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Street number / Building</label>
+          </div>
+          <div class="relative z-0 w-full mb-5 group">
+            <input type="text" name="zipCode" id="zipCode" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="zipCode" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Zip Code</label>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="relative z-0 w-full mb-5 group">
+            <label for="region" class="sr-only">Region </label>
+            <div class="relative">
+              <select id="region" onchange="fillProvinenceSelector()"
+                      class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                <option selected>Region</option>
+                <option value="andalusia">Andalusia</option>
+                <option value="aragon">Aragon</option>
+                <option value="asturias">Asturias</option>
+                <option value="balearic-islands">Balearic Islands</option>
+                <option value="basque-country">Basque Country</option>
+                <option value="canary-islands">Canary Islands</option>
+                <option value="cantabria">Cantabria</option>
+                <option value="castile-and-leon">Castile and León</option>
+                <option value="castile-la-mancha">Castile-La Mancha</option>
+                <option value="catalonia">Catalonia</option>
+                <option value="extremadura">Extremadura</option>
+                <option value="galicia">Galicia</option>
+                <option value="la-rioja">La Rioja</option>
+                <option value="madrid">Madrid</option>
+                <option value="murcia">Murcia</option>
+                <option value="navarre">Navarre</option>
+                <option value="valencian-community">Valencian Community</option>
+              </select>
+              <svg class="absolute top-1/2 right-2 transform -translate-y-1/2 pointer-events-none w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <div class="relative z-0 w-full mb-5 group">
+            <label for="provinence" class="sr-only">Provinence </label>
+            <div class="relative">
+              <select id="provinence"
+                      class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                <option selected>Provinence</option>
+              </select>
+              <svg class="absolute top-1/2 right-2 transform -translate-y-1/2 pointer-events-none w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <button onclick="nextFormStep('address')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Next
+          </button>
+        </div>
+      </div>
+
+      <!-- Driving License -->
+      <div id="driving-license">
+        <div class="flex justify-start my-4">
+          <button onclick="previousFormStep('driving-license')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Previous
+          </button>
+        </div>
+        <h4 class="text-lg font-bold text-gray-900 dark:text-white md:text-xl lg:text-lg my-3">Driving License Details</h4>
+
+        <div class="relative z-0 w-full mb-5 group">
+          <input type="date" name="licenseDate" id="licenseDate" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
+          <label for="licenseDate" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Date of Issue</label>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="flex items-center justify-center w-full relative">
+            <label for="driving-license-front" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600 dark:text-gray-400 relative" id="drop-zone-front">
+              Driving License Front Side
+              <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                </svg>
+                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold"></span></p>
+                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG or JPG</p>
+              </div>
+              <input id="driving-license-front" type="file" class="hidden" accept="image/*" />
+
+              <img id="preview-front" class="absolute inset-0 w-full h-full object-cover rounded-lg hidden" />
+            </label>
+            <button id="clear-front" class="absolute top-2 right-2 p-1 bg-transparent text-white hidden">X</button>
+          </div>
+          <div class="flex items-center justify-center w-full relative mb-2.5">
+            <label for="driving-license-rear" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600 relative dark:text-gray-400" id="drop-zone-rear">
+              Driving License Back Side
+              <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                </svg>
+                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold"></span></p>
+                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG or JPG</p>
+              </div>
+              <input id="driving-license-rear" type="file" class="hidden" accept="image/*" />
+
+              <img id="preview-rear" class="absolute inset-0 w-full h-full object-cover rounded-lg hidden" />
+            </label>
+            <button id="clear-rear" class="absolute top-2 right-2 p-1 bg-transparent text-white hidden">X</button>
+          </div>
+        </div>
+
+
+
+        <div class="flex justify-end">
+          <button onclick="nextFormStep('driving-license')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Next
+          </button>
+        </div>
+      </div>
+
+      <!-- Vehicle Details -->
+      <div id="vehicle-details">
+        <div class="flex justify-start my-4">
+          <button onclick="previousFormStep('vehicle-details')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Previous
+          </button>
+        </div>
+        <h4 class="text-lg font-bold text-gray-900 dark:text-white md:text-xl lg:text-lg my-3">Vehicle Details</h4>
+        <div class="relative z-0 w-full mb-5 group">
+          <input type="date" name="vehicleRegistrationDate" id="vehicleRegistrationDate" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
+          <label for="vehicleRegistrationDate" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Vehicle Registration Date</label>
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+          <input type="text" name="licensePlate" id="licensePlate" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="licensePlate" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">License Plate Nº</label>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="relative z-0 w-full mb-5 group">
+            <label for="vehicleType" class="sr-only">Vehicle Type </label>
+            <div class="relative">
+              <select id="vehicleType"
+                      class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                <option selected>Vehicle Type</option>
+                <option value="coupe">Coupe</option>
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="other">Other</option>
+              </select>
+              <svg class="absolute top-1/2 right-2 transform -translate-y-1/2 pointer-events-none w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <div class="relative z-0 w-full mb-5 group">
+            <label for="fuel" class="sr-only">Fuel Type </label>
+            <div class="relative">
+              <select id="fuel"
+                      class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                <option selected>Fuel Type</option>
+                <option value="petrol">Petrol</option>
+                <option value="diesel">Diesel</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="electric">Electric</option>
+              </select>
+              <svg class="absolute top-1/2 right-2 transform -translate-y-1/2 pointer-events-none w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="relative z-0 w-full mb-5 group">
+            <label for="make" class="sr-only">Make </label>
+            <div class="relative">
+              <select id="make" onchange="fillModelSelector()"
+                      class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                <option selected>Make</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="toyota">Toyota</option>
+                <option value="landRover">Land Rover</option>
+                <option value="bmw">BMW</option>
+              </select>
+              <svg class="absolute top-1/2 right-2 transform -translate-y-1/2 pointer-events-none w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <div class="relative z-0 w-full mb-5 group">
+            <label for="model" class="sr-only">Model</label>
+            <div class="relative">
+              <select id="model"
+                      class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                <option selected>Model</option>
+              </select>
+              <svg class="absolute top-1/2 right-2 transform -translate-y-1/2 pointer-events-none w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="flex justify-end">
+          <button onclick="nextFormStep('vehicle-details')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Next
+          </button>
+        </div>
+      </div>
+
+      <!-- Insurance Type -->
+      <div id="insurance-type">
+        <div class="flex justify-start my-4">
+          <button onclick="previousFormStep('insurance-type')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Previous
+          </button>
+        </div>
+        <h4 class="text-lg font-bold text-gray-900 dark:text-white md:text-xl lg:text-lg my-3">Insurance Types</h4>
+          <div class="grid grid-cols-2 gap-6">
+            <!-- CHEVRON IZQUIERDA
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-4" onclick="exploreInsuranceOptions('backward')" cursor="pointer">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+            -->
+            <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700" id="terceros">
+              <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan</h5>
+              <div class="flex items-baseline text-gray-900 dark:text-white">
+                <span class="text-3xl font-semibold">€</span>
+                <span class="text-5xl font-extrabold tracking-tight">0</span>
+                <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/year</span>
+              </div>
+              <ul role="list" class="space-y-5 my-7">
+                <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers damages to third parties</span>
+                </li>
+                <li class="flex line-through decoration-gray-500">
+                  <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Covers damage or loss due to theft or fire of the vehicle</span>
+                </li>
+                <li class="flex line-through decoration-gray-500">
+                  <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Covers damage to the vehicle</span>
+                </li>
+                <li class="flex line-through decoration-gray-500">
+                  <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Covers all legal fees</span>
+                </li>
+              </ul>
+              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-terceros" onclick="choosePlan('terceros')">Choose plan</button>
+              <p class="mt-2 text-center text-sm font-semibold text-blue-500" id="selected-terceros" style="display: none">Selected</p>
+            </div>
+
+            <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700" id="terceros-ampliado">
+              <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Third Party +</h5>
+              <div class="flex items-baseline text-gray-900 dark:text-white">
+                <span class="text-3xl font-semibold">€</span>
+                <span class="text-5xl font-extrabold tracking-tight">0</span>
+                <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/year</span>
+              </div>
+              <ul role="list" class="space-y-5 my-7">
+                <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers damages to third parties</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers damage or loss due to theft or fire of the vehicle</span>
+                </li>
+                <li class="flex line-through decoration-gray-500">
+                  <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Covers damage to the vehicle</span>
+                </li>
+                <li class="flex line-through decoration-gray-500">
+                  <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Covers all legal fees</span>
+                </li>
+              </ul>
+              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-terceros-ampliado" onclick="choosePlan('terceros-ampliado')">Choose plan</button>
+              <p class="mt-2 text-center text-sm font-semibold text-blue-500" id="selected-terceros-ampliado" style="display: none">Selected</p>
+            </div>
+
+            <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700" id="franquicia">
+              <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Full coverage with Copay</h5>
+              <div class="flex items-baseline text-gray-900 dark:text-white">
+                <span class="text-3xl font-semibold">€</span>
+                <span class="text-5xl font-extrabold tracking-tight">0</span>
+                <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/year</span>
+              </div>
+              <ul role="list" class="space-y-5 my-7">
+                <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers damages to third parties</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers damage or loss due to theft or fire of the vehicle</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers damage to the vehicle<span class="text-red-500"> *</span></span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers legal fees <span class="text-red-500"> *</span></span>
+                </li>
+              </ul>
+              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-franquicia" onclick="choosePlan('franquicia')">Choose plan</button>
+              <p class="mt-2 text-center text-sm font-semibold text-blue-500" id="selected-franquicia" style="display: none">Selected</p>
+            </div>
+
+            <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700" id="todo-riesgo">
+              <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Full coverage</h5>
+              <div class="flex items-baseline text-gray-900 dark:text-white">
+                <span class="text-3xl font-semibold">€</span>
+                <span class="text-5xl font-extrabold tracking-tight">0</span>
+                <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/year</span>
+              </div>
+              <ul role="list" class="space-y-5 my-7">
+                <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers damages to third parties</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers damage or loss due to theft or fire of the vehicle</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers damage to the vehicle</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers legal fees</span>
+                </li>
+              </ul>
+              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-todo-riesgo" onclick="choosePlan('todo-riesgo')">Choose plan</button>
+              <p class="mt-2 text-center text-sm font-semibold text-blue-500" id="selected-todo-riesgo" style="display: none">Selected</p>
+            </div>
+            <!-- CHEVRON DERECHA
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-4" onclick="exploreInsuranceOptions('forward')" cursor="pointer">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+            -->
+          </div>
+          <p class="text-red-500 text-sm">* User pays Copay Fee *</p>
+          <div class="flex items-center my-3.5">
+            <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.</label>
+          </div>
+          <div class="flex justify-end">
+            <button type="button" onclick="submitForm()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              Confirm
+            </button>
+          </div>
+      </div>
+
+    </form>
+  </body>
+</html>
+
+<!-- TODO 3. Add validation -->
+<!-- TODO 4. Add Comunidad and Provincia functionality, same for make and model -->
+<!-- TODO 5. Add transition between forms -->
+<!-- TODO 6. Actual calculation of the insurance -->
+<!-- TODO 7. Display the calculated insurance -->
+
+
+
+<!--
+VALIDACIONES :
+    Nombre y Apellidos: Solo letras, no vacíos. Máximo 30 caracteres por campo.
+    DNI: Formato válido. Ocho dígitos y letra mayúscula.
+    Fecha de nacimiento: Mayor de 18.
+    Fecha del carnet: No posterior a la fecha actual.
+    Fecha de matriculación: No posterior a la fecha actual.
+    Matrícula: Formato español válido (e.g., 1234-ABC).
+    Código postal: 5 dígitos numéricos.
+    Fichero tipo jpg, jpeg o png.
+-->
+
+<!--
+CALCULAR SEGURO:
+    Edad del conductor (mayor de 18 años; menores de 25 pagan 10% más).
+    Años con el permiso de conducir (descuento 10 % para más de 5 años).
+    Penalización por el tipo de vehículo (20%, 15%, 5%, 0%).
+    Precio base tipo de seguro (500, 650, 750, 1000)Años del coche (penalización 1% por años de antigüedad  a partir de 10 años).
+-->
+
+<script>
+
+  const listaRegionesProvincias = {
+    "andalusia": ["almeria", "cadiz", "cordoba", "granada", "huelva", "jaen", "malaga", "seville"],
+    "aragon": ["huesca", "teruel", "zaragoza"],
+    "asturias": ["asturias"],
+    "balearic-islands": ["balearic-islands"],
+    "basque-country": ["alava", "guipuzcoa", "vizcaya"],
+    "canary-islands": ["canary-islands"],
+    "cantabria": ["cantabria"],
+    "castile-and-leon": ["avila", "burgos", "leon", "palencia", "salamanca", "segovia", "soria", "valladolid", "zamora"],
+    "castile-la-mancha": ["albacete", "ciudad-real", "cuenca", "guadalajara", "toledo"],
+    "catalonia": ["barcelona", "girona", "lleida", "tarragona"],
+    "extremadura": ["badajoz", "caceres"],
+    "galicia": ["a-coruna", "lugo", "ourense", "pontevedra"],
+    "la-rioja": ["la-rioja"],
+    "madrid": ["madrid"],
+    "murcia": ["murcia"],
+    "navarre": ["navarre"],
+    "valencian-community": ["alicante", "castellon", "valencia"]
+  };
+
+  const makeModels = {
+    "mercedes": ["a-class", "b-class", "c-class", "e-class", "s-class", "clk-class"],
+    "toyota": ["supra", "corolla", "4Runner", "prius", "rav4"],
+    "landRover": ["discovery", "defender", "evoque", "velar"],
+    "bmw": ["1-series", "2-series", "3-series", "4-series", "5-series"]
+  }
+
+  const datosUsuario = {
+    "nombre": "",
+    "apellidos": "",
+    "email": "",
+    "telefono": "",
+    "dni": "",
+    "sexo": "",
+    "fechaNacimiento": "",
+    "direccion": {
+      "calle": "",
+      "numero": "",
+      "codigoPostal": "",
+      "provincia": "",
+      "comunidad": ""
+    },
+    "carnet": {
+      "fecha": "",
+    },
+
+    "vehiculo": {
+      "matriculacion": "",
+      "matricula": "",
+      "tipo": "",
+      "combustible": "",
+      "marca": "",
+      "modelo": ""
+    },
+
+    "insurance": {
+      "type": ""
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("address").hidden = true;
+    document.getElementById("driving-license").hidden = true;
+    document.getElementById("vehicle-details").hidden = true;
+    document.getElementById("insurance-type").hidden = true;
+  });
+
+
+  setupDropZone('driving-license-front', 'preview-front', 'drop-zone-front', 'clear-front');
+  setupDropZone('driving-license-rear', 'preview-rear', 'drop-zone-rear', 'clear-rear');
+
+  function nextFormStep(actualForm) {
+
+    if (actualForm == "personal-details") {
+      if (validatePersonalDetails()){
+        document.getElementById("personal-details").hidden = true;
+        document.getElementById("address").hidden = false;
+        document.getElementById("progress-bar").style.width = "25%";
+      }
+
+    } else if (actualForm == "address") {
+      if(validateAdress()) {
+        document.getElementById("address").hidden = true;
+        document.getElementById("driving-license").hidden = false;
+        document.getElementById("progress-bar").style.width = "50%";
+      }
+
+    } else if (actualForm == "driving-license") {
+      if(validateDrivingLicense()) {
+        document.getElementById("driving-license").hidden = true;
+        document.getElementById("vehicle-details").hidden = false;
+        document.getElementById("progress-bar").style.width = "75%";
+      }
+
+    } else if (actualForm == "vehicle-details") {
+      if (validateVehicleDetails()) {
+        document.getElementById("vehicle-details").hidden = true;
+        document.getElementById("insurance-type").hidden = false;
+        document.getElementById("progress-bar").style.width = "100%";
+        document.getElementById("insurance-type").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+  }
+
+  function previousFormStep(actualForm) {
+    if (actualForm == "address") {
+      document.getElementById("address").hidden = true;
+      document.getElementById("personal-details").hidden = false;
+      document.getElementById("progress-bar").style.width = "0%";
+
+
+    } else if (actualForm == "driving-license") {
+
+      document.getElementById("driving-license").hidden = true;
+      document.getElementById("address").hidden = false;
+      document.getElementById("progress-bar").style.width = "25%";
+
+
+    } else if (actualForm == "vehicle-details") {
+      document.getElementById("vehicle-details").hidden = true;
+      document.getElementById("driving-license").hidden = false;
+      document.getElementById("progress-bar").style.width = "50%";
+
+    }
+    else if (actualForm == "insurance-type") {
+      document.getElementById("insurance-type").hidden = true;
+      document.getElementById("vehicle-details").hidden = false;
+      document.getElementById("progress-bar").style.width = "75%";
+
+    }
+  }
+
+  function previewImage(file, previewId) {
+    const preview = document.getElementById(previewId);
+    const deleteButtonFront = document.getElementById("clear-front");
+    const deleteButtonRear = document.getElementById("clear-rear");
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      preview.src = e.target.result;
+      preview.classList.remove('hidden');
+      if (previewId = 'preview-front'){
+        deleteButtonFront.classList.remove('hidden')
+      }
+      if(previewId = 'preview-rear'){
+        deleteButtonRear.classList.remove('hidden')
+      }
+    };
+
+    reader.readAsDataURL(file);
+  }
+
+  function setupDropZone(inputId, previewId, dropZoneId, clearButtonId) {
+    const input = document.getElementById(inputId);
+    const dropZone = document.getElementById(dropZoneId);
+    const preview = document.getElementById(previewId);
+    const clearButton = document.getElementById(clearButtonId);
+
+    input.addEventListener('change', function () {
+      if (this.files[0]) {
+        previewImage(this.files[0], previewId);
+      }
+    });
+
+    dropZone.addEventListener('dragover', function (e) {
+      e.preventDefault();
+      dropZone.classList.add('bg-gray-200'); // Add a highlight
+    });
+
+    dropZone.addEventListener('dragleave', function () {
+      dropZone.classList.remove('bg-gray-200'); // Remove highlight
+    });
+
+    dropZone.addEventListener('drop', function (e) {
+      e.preventDefault();
+      dropZone.classList.remove('bg-gray-200'); // Remove highlight
+
+      const file = e.dataTransfer.files[0];
+      if (file) {
+        previewImage(file, previewId);
+        input.files = e.dataTransfer.files; // Update the input's file list
+      }
+    });
+
+    clearButton.addEventListener('click', function () {
+      input.value = '';
+      preview.src = '';
+      preview.classList.add('hidden');
+    });
+  }
+
+  function fillProvinenceSelector(){
+    let seleccion = document.getElementById("region").value;
+    let selectorProvincias = document.getElementById("provinence");
+
+    let provincias = listaRegionesProvincias[seleccion];
+    console.log(provincias);
+
+  }
+
+  function fillModelSelector(){
+    let seleccion = document.getElementById("make").value;
+    let selectorModel = document.getElementById("model");
+
+    let models = makeModels[seleccion];
+    console.log(models);
+
+  }
+
+  function choosePlan(plan){
+    datosUsuario.insurance.type = plan;
+    let estiloSeleccionado = 'w-full max-w-sm p-4 bg-white border border-blue-500 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-blue-400" id="terceros-ampliado';
+
+    let planes = ["terceros", "terceros-ampliado", "franquicia", "todo-riesgo"];
+
+    document.getElementById(plan).className = estiloSeleccionado;
+    document.getElementById('btn-' + plan).style.display = 'none';
+    document.getElementById('selected-' + plan).style.display = 'block';
+
+    planes.forEach(element => {
+      if (element != plan){
+        document.getElementById(element).className = 'w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700';
+        document.getElementById('btn-' + element).style.display = 'block';
+        document.getElementById('selected-' + element).style.display = 'none';
+      }
+    });
+  }
+
+
+  function validatePersonalDetails(){
+    return true;
+  }
+
+  function validateAdress(){
+    return true;
+  }
+
+  function validateDrivingLicense(){
+    return true;
+  }
+
+  function validateVehicleDetails(){
+    return true;
+  }
+
+  function submitForm(){
+    console.log("Formulario enviado");
+    console.log(datosUsuario);
+  }
+
+</script>
+
+
+<style>
+  #progress-bar {
+    transition: width 0.5s ease-in-out;
+  }
+</style>
