@@ -45,4 +45,7 @@ postcss.config.js
 *.tmp
 *.lock
 
+package-lock.json
+package.json
+
 
