@@ -53,9 +53,9 @@
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-5 group">
-            <label for="sexo" class="sr-only">Sexo </label>
+            <label for="sex" class="sr-only">Sexo </label>
             <div class="relative">
-              <select id="sexo"
+              <select id="sex"
                       class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
                 <option selected>Sex</option>
                 <option value="male">Male</option>
@@ -109,23 +109,23 @@
               <select id="region"
                       class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
                 <option selected>Region</option>
-                <option value="andalusia">Andalusia</option>
-                <option value="aragon">Aragon</option>
-                <option value="asturias">Asturias</option>
-                <option value="balearic-islands">Balearic Islands</option>
-                <option value="basque-country">Basque Country</option>
-                <option value="canary-islands">Canary Islands</option>
-                <option value="cantabria">Cantabria</option>
-                <option value="castile-and-leon">Castile and León</option>
-                <option value="castile-la-mancha">Castile-La Mancha</option>
-                <option value="catalonia">Catalonia</option>
-                <option value="extremadura">Extremadura</option>
-                <option value="galicia">Galicia</option>
-                <option value="la-rioja">La Rioja</option>
-                <option value="madrid">Madrid</option>
-                <option value="murcia">Murcia</option>
-                <option value="navarre">Navarre</option>
-                <option value="valencian-community">Valencian Community</option>
+                <option value="Andalusia">Andalusia</option>
+                <option value="Aragon">Aragon</option>
+                <option value="Asturias">Asturias</option>
+                <option value="Balearic-Islands">Balearic Islands</option>
+                <option value="Basque-Country">Basque Country</option>
+                <option value="Canary-Islands">Canary Islands</option>
+                <option value="Cantabria">Cantabria</option>
+                <option value="Castile-And-Leon">Castile and León</option>
+                <option value="Castile-La-Mancha">Castile-La Mancha</option>
+                <option value="Catalonia">Catalonia</option>
+                <option value="Extremadura">Extremadura</option>
+                <option value="Galicia">Galicia</option>
+                <option value="La-Rioja">La Rioja</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Murcia">Murcia</option>
+                <option value="Navarre">Navarre</option>
+                <option value="Valencian-Community">Valencian Community</option>
               </select>
               <svg class="absolute top-1/2 right-2 transform -translate-y-1/2 pointer-events-none w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
@@ -307,13 +307,8 @@
             Previous
           </button>
         </div>
-        <h4 class="text-lg font-bold text-gray-900 dark:text-white md:text-xl lg:text-lg my-3">Insurance Types</h4>
+        <h4 class="text-lg font-bold text-gray-900 dark:text-white md:text-xl lg:text-lg my-3 justify-center">Insurance Types</h4>
           <div class="grid grid-cols-2 gap-6">
-            <!-- CHEVRON IZQUIERDA
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-4" onclick="exploreInsuranceOptions('backward')" cursor="pointer">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-            </svg>
-            -->
             <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700" id="terceros">
               <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan</h5>
               <div class="flex items-baseline text-gray-900 dark:text-white">
@@ -461,11 +456,6 @@
               <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-todo-riesgo">Choose plan</button>
               <p class="mt-2 text-center text-sm font-semibold text-blue-500" id="selected-todo-riesgo" style="display: none">Selected</p>
             </div>
-            <!-- CHEVRON DERECHA
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-4" onclick="exploreInsuranceOptions('forward')" cursor="pointer">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-            </svg>
-            -->
           </div>
           <p class="text-red-500 text-sm">* User pays Copay Fee *</p>
           <div class="flex items-center my-3.5">
@@ -484,7 +474,6 @@
 </html>
 
 <!-- TODO 3. Add validation -->
-<!-- TODO 4. Add Comunidad and Provincia functionality, same for make and model -->
 <!-- TODO 5. Add transition between forms -->
 <!-- TODO 6. Actual calculation of the insurance -->
 <!-- TODO 7. Display the calculated insurance -->
@@ -535,27 +524,30 @@ CALCULAR SEGURO:
   document.getElementById('btn-franquicia').addEventListener('click', function (){choosePlan('franquicia')});
   document.getElementById('btn-todo-riesgo').addEventListener('click', function (){choosePlan('todo-riesgo')});
 
+
   //Submit the form
   document.getElementById('btn-submit').addEventListener('click', function (){submitForm()});
 
+
+
   const listaRegionesProvincias = {
-    "andalusia": ["almeria", "cadiz", "cordoba", "granada", "huelva", "jaen", "malaga", "seville"],
-    "aragon": ["huesca", "teruel", "zaragoza"],
-    "asturias": ["asturias"],
-    "balearic-islands": ["balearic-islands"],
-    "basque-country": ["alava", "guipuzcoa", "vizcaya"],
-    "canary-islands": ["canary-islands"],
-    "cantabria": ["cantabria"],
-    "castile-and-leon": ["avila", "burgos", "leon", "palencia", "salamanca", "segovia", "soria", "valladolid", "zamora"],
-    "castile-la-mancha": ["albacete", "ciudad-real", "cuenca", "guadalajara", "toledo"],
-    "catalonia": ["barcelona", "girona", "lleida", "tarragona"],
-    "extremadura": ["badajoz", "caceres"],
-    "galicia": ["a-coruna", "lugo", "ourense", "pontevedra"],
-    "la-rioja": ["la-rioja"],
-    "madrid": ["madrid"],
-    "murcia": ["murcia"],
-    "navarre": ["navarre"],
-    "valencian-community": ["alicante", "castellon", "valencia"]
+    "Andalusia": ["Almeria", "Cadiz", "Cordoba", "Granada", "Huelva", "Jaen", "Malaga", "Seville"],
+    "Aragon": ["Huesca", "Teruel", "Zaragoza"],
+    "Asturias": ["Asturias"],
+    "Balearic-Islands": ["Balearic-Islands"],
+    "Basque-Country": ["Alava", "Guipuzcoa", "Vizcaya"],
+    "Canary-Islands": ["Canary-Islands"],
+    "Cantabria": ["Cantabria"],
+    "Castile-And-Leon": ["Avila", "Burgos", "Leon", "Palencia", "Salamanca", "Segovia", "Soria", "Valladolid", "Zamora"],
+    "Castile-La-Mancha": ["Albacete", "Ciudad-Real", "Cuenca", "Guadalajara", "Toledo"],
+    "Catalonia": ["Barcelona", "Girona", "Lleida", "Tarragona"],
+    "Extremadura": ["Badajoz", "Caceres"],
+    "Galicia": ["A-Coruna", "Lugo", "Ourense", "Pontevedra"],
+    "La-Rioja": ["La-Rioja"],
+    "Madrid": ["Madrid"],
+    "Murcia": ["Murcia"],
+    "Navarre": ["Navarre"],
+    "Valencian-Community": ["Alicante", "Castellon", "Valencia"]
   };
 
   const makeModels = {
@@ -565,7 +557,7 @@ CALCULAR SEGURO:
     "bmw": ["1-series", "2-series", "3-series", "4-series", "5-series"]
   }
 
-  const datosUsuario = {
+  let datosUsuario = {
     "nombre": "",
     "apellidos": "",
     "email": "",
@@ -608,6 +600,8 @@ CALCULAR SEGURO:
 
   setupDropZone('driving-license-front', 'preview-front', 'drop-zone-front', 'clear-front');
   setupDropZone('driving-license-rear', 'preview-rear', 'drop-zone-rear', 'clear-rear');
+
+  let removedPlans = 0;
 
   function nextFormStep(actualForm) {
 
@@ -746,21 +740,32 @@ CALCULAR SEGURO:
 
   function fillProvinenceSelector(){
     let seleccion = document.getElementById("region").value;
-    let selectorProvincias = document.getElementById("provinence");
-
     let provincias = listaRegionesProvincias[seleccion];
+    document.getElementById('provinence').innerHTML ='';
+
     console.log(provincias);
 
+    if (provincias) {
+      provincias.forEach(e => addSelection(e, 'provinence'));
+    }
   }
 
   function fillModelSelector(){
     let seleccion = document.getElementById("make").value;
-    let selectorModel = document.getElementById("model");
-
     let models = makeModels[seleccion];
-    console.log(models);
+    document.getElementById('model').innerHTML ='';
 
+
+    if (models) {
+      models.forEach(e => addSelection(e, 'model'));
+    }
   }
+
+  function addSelection(item, target){
+    let addedOption = "<option selected>"+item+"</option>"
+    document.getElementById(target).innerHTML = document.getElementById(target).innerHTML + addedOption;
+  }
+
 
   function choosePlan(plan){
     datosUsuario.insurance.type = plan;
@@ -783,10 +788,51 @@ CALCULAR SEGURO:
 
 
   function validatePersonalDetails(){
-    return true;
+    let nombre = document.getElementById("firstname").value;
+    let apellidos = document.getElementById("lastname").value;
+    let email = document.getElementById("email").value;
+    let telefono = document.getElementById("phone").value;
+    let dni = document.getElementById("dni").value;
+    let sexo = document.getElementById("sex").value;
+    let fechaNacimiento = document.getElementById("brithdate").value;
+
+    let checks = 0;
+
+    if (nombre != ''){
+      datosUsuario.nombre = nombre;
+      checks++;
+    }
+    if (apellidos != ''){
+      datosUsuario.apellidos = apellidos;
+      checks++;
+    }
+    if (email != ''){
+      datosUsuario.email = email;
+      checks++;
+    }
+    if (telefono != ''){
+      datosUsuario.telefono = telefono;
+      checks++;
+    }
+    if (dni != ''){
+      datosUsuario.dni = dni;
+      checks++;
+    }
+    if (sexo != ''){
+      datosUsuario.sexo = sexo;
+      checks++;
+    }
+    if (fechaNacimiento != ''){
+      datosUsuario.fechaNacimiento = fechaNacimiento;
+      checks++;
+    }
+    return checks === 7;
+
+
   }
 
   function validateAdress(){
+
     return true;
   }
 
