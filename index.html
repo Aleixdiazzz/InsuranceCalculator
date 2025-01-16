@@ -73,7 +73,7 @@
           </div>
         </div>
         <div class="flex justify-end">
-          <button onclick="nextFormStep('personal-details')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <button id="btn-personal-details" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Next
           </button>
         </div>
@@ -82,7 +82,7 @@
       <!-- Address -->
       <div id="address">
         <div class="flex justify-start my-4">
-          <button onclick="previousFormStep('address')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <button id="btn-previous-address" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Previous
           </button>
         </div>
@@ -106,7 +106,7 @@
           <div class="relative z-0 w-full mb-5 group">
             <label for="region" class="sr-only">Region </label>
             <div class="relative">
-              <select id="region" onchange="fillProvinenceSelector()"
+              <select id="region"
                       class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
                 <option selected>Region</option>
                 <option value="andalusia">Andalusia</option>
@@ -146,7 +146,7 @@
           </div>
         </div>
         <div class="flex justify-end">
-          <button onclick="nextFormStep('address')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <button id="btn-address" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Next
           </button>
         </div>
@@ -155,7 +155,7 @@
       <!-- Driving License -->
       <div id="driving-license">
         <div class="flex justify-start my-4">
-          <button onclick="previousFormStep('driving-license')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <button id="btn-previous-driving-license" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Previous
           </button>
         </div>
@@ -205,7 +205,7 @@
 
 
         <div class="flex justify-end">
-          <button onclick="nextFormStep('driving-license')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <button id="btn-driving-license" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Next
           </button>
         </div>
@@ -214,7 +214,7 @@
       <!-- Vehicle Details -->
       <div id="vehicle-details">
         <div class="flex justify-start my-4">
-          <button onclick="previousFormStep('vehicle-details')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <button id="btn-previous-vehicle-details" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Previous
           </button>
         </div>
@@ -265,7 +265,7 @@
           <div class="relative z-0 w-full mb-5 group">
             <label for="make" class="sr-only">Make </label>
             <div class="relative">
-              <select id="make" onchange="fillModelSelector()"
+              <select id="make"
                       class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
                 <option selected>Make</option>
                 <option value="mercedes">Mercedes</option>
@@ -294,7 +294,7 @@
 
 
         <div class="flex justify-end">
-          <button onclick="nextFormStep('vehicle-details')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <button id="btn-vehicle-details" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Next
           </button>
         </div>
@@ -303,7 +303,7 @@
       <!-- Insurance Type -->
       <div id="insurance-type">
         <div class="flex justify-start my-4">
-          <button onclick="previousFormStep('insurance-type')" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <button id="btn-previous-insurance-type" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Previous
           </button>
         </div>
@@ -347,7 +347,7 @@
                   <span class="text-base font-normal leading-tight text-gray-500 ms-3">Covers all legal fees</span>
                 </li>
               </ul>
-              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-terceros" onclick="choosePlan('terceros')">Choose plan</button>
+              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-terceros" >Choose plan</button>
               <p class="mt-2 text-center text-sm font-semibold text-blue-500" id="selected-terceros" style="display: none">Selected</p>
             </div>
 
@@ -384,7 +384,7 @@
                   <span class="text-base font-normal leading-tight text-gray-500 ms-3">Covers all legal fees</span>
                 </li>
               </ul>
-              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-terceros-ampliado" onclick="choosePlan('terceros-ampliado')">Choose plan</button>
+              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-terceros-ampliado" >Choose plan</button>
               <p class="mt-2 text-center text-sm font-semibold text-blue-500" id="selected-terceros-ampliado" style="display: none">Selected</p>
             </div>
 
@@ -421,7 +421,7 @@
                   <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers legal fees <span class="text-red-500"> *</span></span>
                 </li>
               </ul>
-              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-franquicia" onclick="choosePlan('franquicia')">Choose plan</button>
+              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-franquicia">Choose plan</button>
               <p class="mt-2 text-center text-sm font-semibold text-blue-500" id="selected-franquicia" style="display: none">Selected</p>
             </div>
 
@@ -458,7 +458,7 @@
                   <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Covers legal fees</span>
                 </li>
               </ul>
-              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-todo-riesgo" onclick="choosePlan('todo-riesgo')">Choose plan</button>
+              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center" id="btn-todo-riesgo">Choose plan</button>
               <p class="mt-2 text-center text-sm font-semibold text-blue-500" id="selected-todo-riesgo" style="display: none">Selected</p>
             </div>
             <!-- CHEVRON DERECHA
@@ -473,7 +473,7 @@
             <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.</label>
           </div>
           <div class="flex justify-end">
-            <button type="button" onclick="submitForm()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <button type="button" id="btn-submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               Confirm
             </button>
           </div>
@@ -488,7 +488,6 @@
 <!-- TODO 5. Add transition between forms -->
 <!-- TODO 6. Actual calculation of the insurance -->
 <!-- TODO 7. Display the calculated insurance -->
-
 
 
 <!--
@@ -512,6 +511,32 @@ CALCULAR SEGURO:
 -->
 
 <script>
+
+  //Move the form forward
+  document.getElementById('btn-personal-details').addEventListener("click", function() { nextFormStep('personal-details'); });
+  document.getElementById('btn-address').addEventListener("click", function() { nextFormStep('address'); });
+  document.getElementById('btn-driving-license').addEventListener("click", function() { nextFormStep('driving-license'); });
+  document.getElementById('btn-vehicle-details').addEventListener("click", function() { nextFormStep('vehicle-details'); });
+  document.getElementById('btn-vehicle-details').addEventListener("click", function() { nextFormStep('vehicle-details'); });
+
+  //Move the Form backward
+  document.getElementById('btn-previous-address').addEventListener("click", function() { previousFormStep('address'); });
+  document.getElementById('btn-previous-driving-license').addEventListener("click", function() { previousFormStep('driving-license'); });
+  document.getElementById('btn-previous-vehicle-details').addEventListener("click", function() { previousFormStep('vehicle-details'); });
+  document.getElementById('btn-previous-insurance-type').addEventListener("click", function() { previousFormStep('insurance-type'); });
+
+  //Changes in selectors
+  document.getElementById('region').addEventListener("change", function() { fillProvinenceSelector(); });
+  document.getElementById('make').addEventListener("change", function() { fillModelSelector(); });
+
+  //Selected insurance types
+  document.getElementById('btn-terceros').addEventListener('click', function (){choosePlan('terceros')});
+  document.getElementById('btn-terceros-ampliado').addEventListener('click', function (){choosePlan('terceros-ampliado')});
+  document.getElementById('btn-franquicia').addEventListener('click', function (){choosePlan('franquicia')});
+  document.getElementById('btn-todo-riesgo').addEventListener('click', function (){choosePlan('todo-riesgo')});
+
+  //Submit the form
+  document.getElementById('btn-submit').addEventListener('click', function (){submitForm()});
 
   const listaRegionesProvincias = {
     "andalusia": ["almeria", "cadiz", "cordoba", "granada", "huelva", "jaen", "malaga", "seville"],
@@ -591,6 +616,8 @@ CALCULAR SEGURO:
         document.getElementById("personal-details").hidden = true;
         document.getElementById("address").hidden = false;
         document.getElementById("progress-bar").style.width = "25%";
+        document.getElementById("address").scrollIntoView({ behavior: "smooth", block: "start" });
+
       }
 
     } else if (actualForm == "address") {
@@ -598,6 +625,8 @@ CALCULAR SEGURO:
         document.getElementById("address").hidden = true;
         document.getElementById("driving-license").hidden = false;
         document.getElementById("progress-bar").style.width = "50%";
+        document.getElementById("driving-license").scrollIntoView({ behavior: "smooth", block: "start" });
+
       }
 
     } else if (actualForm == "driving-license") {
@@ -605,6 +634,8 @@ CALCULAR SEGURO:
         document.getElementById("driving-license").hidden = true;
         document.getElementById("vehicle-details").hidden = false;
         document.getElementById("progress-bar").style.width = "75%";
+        document.getElementById("vehicle-details").scrollIntoView({ behavior: "smooth", block: "start" });
+
       }
 
     } else if (actualForm == "vehicle-details") {
@@ -623,6 +654,8 @@ CALCULAR SEGURO:
       document.getElementById("address").hidden = true;
       document.getElementById("personal-details").hidden = false;
       document.getElementById("progress-bar").style.width = "0%";
+      document.getElementById("personal-details").scrollIntoView({ behavior: "smooth", block: "start" });
+
 
 
     } else if (actualForm == "driving-license") {
@@ -630,18 +663,24 @@ CALCULAR SEGURO:
       document.getElementById("driving-license").hidden = true;
       document.getElementById("address").hidden = false;
       document.getElementById("progress-bar").style.width = "25%";
+      document.getElementById("address").scrollIntoView({ behavior: "smooth", block: "start" });
+
 
 
     } else if (actualForm == "vehicle-details") {
       document.getElementById("vehicle-details").hidden = true;
       document.getElementById("driving-license").hidden = false;
       document.getElementById("progress-bar").style.width = "50%";
+      document.getElementById("driving-license").scrollIntoView({ behavior: "smooth", block: "start" });
+
 
     }
     else if (actualForm == "insurance-type") {
       document.getElementById("insurance-type").hidden = true;
       document.getElementById("vehicle-details").hidden = false;
       document.getElementById("progress-bar").style.width = "75%";
+      document.getElementById("vehicle-details").scrollIntoView({ behavior: "smooth", block: "start" });
+
 
     }
   }
