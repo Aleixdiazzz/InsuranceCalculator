@@ -491,14 +491,6 @@ VALIDACIONES :
     Fichero tipo jpg, jpeg o png.
 -->
 
-<!--
-CALCULAR SEGURO:
-    Edad del conductor (mayor de 18 años; menores de 25 pagan 10% más).
-    Años con el permiso de conducir (descuento 10 % para más de 5 años).
-    Penalización por el tipo de vehículo (20%, 15%, 5%, 0%).
-    Precio base tipo de seguro (500, 650, 750, 1000)Años del coche (penalización 1% por años de antigüedad  a partir de 10 años).
--->
-
 <script>
 
   //Move the form forward
@@ -638,6 +630,7 @@ CALCULAR SEGURO:
         document.getElementById("insurance-type").hidden = false;
         document.getElementById("progress-bar").style.width = "100%";
         document.getElementById("insurance-type").scrollIntoView({ behavior: "smooth", block: "start" });
+        calculateInsurance();
       }
     }
 
@@ -828,7 +821,6 @@ CALCULAR SEGURO:
     }
     return checks === 7;
 
-
   }
 
   function validateAdress(){
@@ -847,6 +839,96 @@ CALCULAR SEGURO:
   function submitForm(){
     console.log("Formulario enviado");
     console.log(datosUsuario);
+  }
+
+  function calculateInsurance(){
+    let finalPrice = 0;
+
+    if (datosUsuario.insurance.equals('terceros')){
+      finalPrice = 500;
+      finalPrice = addDriverAge(finalPrice);
+      finalPrice = addLicenseYears(finalPrice);
+      finalPrice = addVehicleType(finalPrice);
+      finalPrice = addVehicleAge(finalPrice);
+    }
+    if (datosUsuario.insurance.equals('terceros-ampliado')){
+      finalPrice = 650;
+      finalPrice = addDriverAge(finalPrice);
+      finalPrice = addLicenseYears(finalPrice);
+      finalPrice = addVehicleType(finalPrice);
+      finalPrice = addVehicleAge(finalPrice);
+    }
+    if (datosUsuario.insurance.equals('franquicia')){
+      finalPrice = 750;
+      finalPrice = addDriverAge(finalPrice);
+      finalPrice = addLicenseYears(finalPrice);
+      finalPrice = addVehicleType(finalPrice);
+      finalPrice = addVehicleAge(finalPrice);
+    }
+    if (datosUsuario.insurance.equals('todo-riesgo')){
+      finalPrice = 1000;
+      finalPrice = addDriverAge(finalPrice);
+      finalPrice = addLicenseYears(finalPrice);
+      finalPrice = addVehicleType(finalPrice);
+      finalPrice = addVehicleAge(finalPrice);
+    }
+
+    return finalPrice;
+  }
+
+  function calculateAge(){
+
+  }
+
+  function calculateLicenseAge(){
+
+  }
+
+  function calculateCarAge(){
+
+  }
+
+  function addDriverAge(price){
+    if (calculateAge(datosUsuario.fechaNacimiento) > 25){
+      return (price + price * 0.1);
+    }
+    else{
+      return price;
+    }
+  }
+
+  function addLicenseYears(price){
+    if (calculateLicenseAge(datosUsuario.carnet.fecha) > 5){
+      return (price - price * 0.1);
+    }
+    else{
+      return price;
+    }
+  }
+
+  function addVehicleType(price){
+    let tipo = datosUsuario.vehiculo.tipo;
+    if (tipo.equals('other')){
+      return price;
+    }
+    if (tipo.equals('coupe')){
+      return (price + price * 0.2);
+    }
+    if (tipo.equals('suv')){
+      return (price + price * 0.15);
+    }
+    if (tipo.equals('sedan')){
+      return (price + price * 0.05);
+    }
+  }
+
+  function addVehicleAge(price){
+    if (calculateCarAge(datosUsuario.vehiculo.matriculacion) >= 10){
+        return price + (price * (0.01 * (calculateCarAge(datosUsuario.vehiculo.matriculacion))));
+        }
+        else{
+        return price;
+    }
   }
 
 </script>
