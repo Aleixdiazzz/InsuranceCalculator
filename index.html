@@ -294,7 +294,7 @@
 
 
         <div class="flex justify-end">
-          <button id="btn-vehicle-details" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <button type="button" id="btn-vehicle-details" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Next
           </button>
         </div>
@@ -313,7 +313,7 @@
               <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan</h5>
               <div class="flex items-baseline text-gray-900 dark:text-white">
                 <span class="text-3xl font-semibold">€</span>
-                <span class="text-5xl font-extrabold tracking-tight">0</span>
+                <span id="precio-terceros" class="text-5xl font-extrabold tracking-tight">0</span>
                 <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/year</span>
               </div>
               <ul role="list" class="space-y-5 my-7">
@@ -350,7 +350,7 @@
               <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Third Party +</h5>
               <div class="flex items-baseline text-gray-900 dark:text-white">
                 <span class="text-3xl font-semibold">€</span>
-                <span class="text-5xl font-extrabold tracking-tight">0</span>
+                <span id="precio-terceros-ampliado" class="text-5xl font-extrabold tracking-tight">0</span>
                 <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/year</span>
               </div>
               <ul role="list" class="space-y-5 my-7">
@@ -387,7 +387,7 @@
               <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Full coverage with Copay</h5>
               <div class="flex items-baseline text-gray-900 dark:text-white">
                 <span class="text-3xl font-semibold">€</span>
-                <span class="text-5xl font-extrabold tracking-tight">0</span>
+                <span id="precio-franquicia" class="text-5xl font-extrabold tracking-tight">0</span>
                 <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/year</span>
               </div>
               <ul role="list" class="space-y-5 my-7">
@@ -424,7 +424,7 @@
               <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Full coverage</h5>
               <div class="flex items-baseline text-gray-900 dark:text-white">
                 <span class="text-3xl font-semibold">€</span>
-                <span class="text-5xl font-extrabold tracking-tight">0</span>
+                <span id="precio-todo-riesgo" class="text-5xl font-extrabold tracking-tight">0</span>
                 <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/year</span>
               </div>
               <ul role="list" class="space-y-5 my-7">
@@ -459,12 +459,12 @@
           </div>
           <p class="text-red-500 text-sm">* User pays Copay Fee *</p>
           <div class="flex items-center my-3.5">
-            <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.</label>
+            <input id="terms" value="true" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="terms"  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.</label>
           </div>
           <div class="flex justify-end">
             <button type="button" id="btn-submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Confirm
+              Hire me!
             </button>
           </div>
       </div>
@@ -473,31 +473,12 @@
   </body>
 </html>
 
-<!-- TODO 3. Add validation -->
-<!-- TODO 5. Add transition between forms -->
-<!-- TODO 6. Actual calculation of the insurance -->
-<!-- TODO 7. Display the calculated insurance -->
-
-
-<!--
-VALIDACIONES :
-    Nombre y Apellidos: Solo letras, no vacíos. Máximo 30 caracteres por campo.
-    DNI: Formato válido. Ocho dígitos y letra mayúscula.
-    Fecha de nacimiento: Mayor de 18.
-    Fecha del carnet: No posterior a la fecha actual.
-    Fecha de matriculación: No posterior a la fecha actual.
-    Matrícula: Formato español válido (e.g., 1234-ABC).
-    Código postal: 5 dígitos numéricos.
-    Fichero tipo jpg, jpeg o png.
--->
-
 <script>
 
   //Move the form forward
   document.getElementById('btn-personal-details').addEventListener("click", function() { nextFormStep('personal-details'); });
   document.getElementById('btn-address').addEventListener("click", function() { nextFormStep('address'); });
   document.getElementById('btn-driving-license').addEventListener("click", function() { nextFormStep('driving-license'); });
-  document.getElementById('btn-vehicle-details').addEventListener("click", function() { nextFormStep('vehicle-details'); });
   document.getElementById('btn-vehicle-details').addEventListener("click", function() { nextFormStep('vehicle-details'); });
 
   //Move the Form backward
@@ -605,6 +586,9 @@ VALIDACIONES :
         document.getElementById("address").scrollIntoView({ behavior: "smooth", block: "start" });
 
       }
+      else{
+        alert("Please fill all the fields");
+      }
 
     } else if (actualForm == "address") {
       if(validateAdress()) {
@@ -612,7 +596,9 @@ VALIDACIONES :
         document.getElementById("driving-license").hidden = false;
         document.getElementById("progress-bar").style.width = "50%";
         document.getElementById("driving-license").scrollIntoView({ behavior: "smooth", block: "start" });
-
+      }
+      else{
+        alert("Please fill all the fields");
       }
 
     } else if (actualForm == "driving-license") {
@@ -621,7 +607,9 @@ VALIDACIONES :
         document.getElementById("vehicle-details").hidden = false;
         document.getElementById("progress-bar").style.width = "75%";
         document.getElementById("vehicle-details").scrollIntoView({ behavior: "smooth", block: "start" });
-
+      }
+      else{
+        alert("Please fill all the fields");
       }
 
     } else if (actualForm == "vehicle-details") {
@@ -630,10 +618,9 @@ VALIDACIONES :
         document.getElementById("insurance-type").hidden = false;
         document.getElementById("progress-bar").style.width = "100%";
         document.getElementById("insurance-type").scrollIntoView({ behavior: "smooth", block: "start" });
-        calculateInsurance();
+        calcularSeguro();
       }
     }
-
   }
 
   function previousFormStep(actualForm) {
@@ -736,7 +723,6 @@ VALIDACIONES :
     let provincias = listaRegionesProvincias[seleccion];
     document.getElementById('provinence').innerHTML ='';
 
-    console.log(provincias);
 
     if (provincias) {
       provincias.forEach(e => addSelection(e, 'provinence'));
@@ -791,15 +777,15 @@ VALIDACIONES :
 
     let checks = 0;
 
-    if (nombre != ''){
+    if (nombreApellidoRegex.test(nombre)){
       datosUsuario.nombre = nombre;
       checks++;
     }
-    if (apellidos != ''){
+    if (nombreApellidoRegex.test(apellidos)){
       datosUsuario.apellidos = apellidos;
       checks++;
     }
-    if (email != ''){
+    if (emailRegex.test(email)){
       datosUsuario.email = email;
       checks++;
     }
@@ -807,7 +793,7 @@ VALIDACIONES :
       datosUsuario.telefono = telefono;
       checks++;
     }
-    if (dni != ''){
+    if (dniRegex.test(dni)){
       datosUsuario.dni = dni;
       checks++;
     }
@@ -815,7 +801,7 @@ VALIDACIONES :
       datosUsuario.sexo = sexo;
       checks++;
     }
-    if (fechaNacimiento != ''){
+    if (validateFechaNacimiento(fechaNacimiento)){
       datosUsuario.fechaNacimiento = fechaNacimiento;
       checks++;
     }
@@ -825,68 +811,166 @@ VALIDACIONES :
 
   function validateAdress(){
 
-    return true;
+    let calle = document.getElementById("street").value;
+    let numero = document.getElementById("streetNumber").value;
+    let codigoPostal = document.getElementById("zipCode").value;
+    let provincia = document.getElementById("provinence").value;
+    let comunidad = document.getElementById("region").value;
+
+    let checks = 0;
+
+    if (calle != ''){
+      datosUsuario.direccion.calle = calle;
+      checks++;
+    }
+    if (numero != ''){
+      datosUsuario.direccion.numero = numero;
+      checks++;
+    }
+    if (postalCodeRegex.test(codigoPostal)){
+      datosUsuario.direccion.codigoPostal = codigoPostal;
+      checks++;
+    }
+    if (provincia != ''){
+      datosUsuario.direccion.provincia = provincia;
+      checks++;
+    }
+    if (comunidad != ''){
+      datosUsuario.direccion.comunidad = comunidad;
+      checks++;
+    }
+
+    return checks === 5;
   }
 
   function validateDrivingLicense(){
-    return true;
+    let fechaCarnet = document.getElementById("licenseDate").value;
+    let fotoCarnet1 = document.getElementById('driving-license-front').value;
+    let fotoCarnet2 = document.getElementById('driving-license-rear').value;
+
+
+    let checks = 0;
+
+    if (validateFechaCarnet(fechaCarnet)){
+      datosUsuario.carnet.fecha = fechaCarnet;
+      checks++;
+    }
+    if (jpgFileRegex.test(fotoCarnet1)){
+      checks++;
+    }
+    if(jpgFileRegex.test(fotoCarnet2)){
+      checks++
+    }
+
+    return checks === 3;
   }
 
   function validateVehicleDetails(){
-    return true;
+    let fechaMatriculacion = document.getElementById("vehicleRegistrationDate").value;
+    let matricula = document.getElementById("licensePlate").value;
+    let tipo = document.getElementById("vehicleType").value;
+    let combustible = document.getElementById("fuel").value;
+    let marca = document.getElementById("make").value;
+    let modelo = document.getElementById("model").value;
+
+    let checks = 0;
+
+    if (validateFechaMatriculacion(fechaMatriculacion)){
+      datosUsuario.vehiculo.matriculacion = fechaMatriculacion;
+      checks++;
+
+    }
+    if (matriculaRegex.test(matricula) || matriculaAntiguaRegex.test(matricula)){
+      datosUsuario.vehiculo.matricula = matricula;
+      checks++;
+
+    }
+    if (tipo != ''){
+      datosUsuario.vehiculo.tipo = tipo;
+      checks++;
+
+    }
+    if (combustible != ''){
+      datosUsuario.vehiculo.combustible = combustible;
+      checks++;
+
+    }
+    if (marca != ''){
+      datosUsuario.vehiculo.marca = marca;
+      checks++;
+
+    }
+    if (modelo != ''){
+      datosUsuario.vehiculo.modelo = modelo;
+      checks++;
+
+    }
+
+    return checks === 6;
   }
 
   function submitForm(){
-    console.log("Formulario enviado");
+    let alertMessage = "Thank you for hiring with us! Sincerely Aleix Díaz";
+    if (document.getElementById('terms').checked){
+      console.log(datosUsuario);
+      alert(alertMessage);
+    }
+  }
+
+  function calcularSeguro(){
     console.log(datosUsuario);
+    let finalPriceTerceros = 0;
+    let finalPriceTercerosAmpliado = 0;
+    let finalPriceFranquicia = 0;
+    let finalPriceTodoRiesgo = 0;
+
+    finalPriceTerceros = 500;
+    finalPriceTerceros = addDriverAge(finalPriceTerceros);
+    finalPriceTerceros = addLicenseYears(finalPriceTerceros);
+    finalPriceTerceros = addVehicleType(finalPriceTerceros);
+    finalPriceTerceros = addVehicleAge(finalPriceTerceros);
+
+    finalPriceTercerosAmpliado = 600;
+    finalPriceTercerosAmpliado = addDriverAge(finalPriceTercerosAmpliado);
+    finalPriceTercerosAmpliado = addLicenseYears(finalPriceTercerosAmpliado);
+    finalPriceTercerosAmpliado = addVehicleType(finalPriceTercerosAmpliado);
+    finalPriceTercerosAmpliado = addVehicleAge(finalPriceTercerosAmpliado);
+
+    finalPriceFranquicia = 750;
+    finalPriceFranquicia = addDriverAge(finalPriceFranquicia);
+    finalPriceFranquicia = addLicenseYears(finalPriceFranquicia);
+    finalPriceFranquicia = addVehicleType(finalPriceFranquicia);
+    finalPriceFranquicia = addVehicleAge(finalPriceFranquicia);
+
+    finalPriceTodoRiesgo = 1000;
+    finalPriceTodoRiesgo = addDriverAge(finalPriceTodoRiesgo);
+    finalPriceTodoRiesgo = addLicenseYears(finalPriceTodoRiesgo);
+    finalPriceTodoRiesgo = addVehicleType(finalPriceTodoRiesgo);
+    finalPriceTodoRiesgo = addVehicleAge(finalPriceTodoRiesgo);
+
+
+    document.getElementById('precio-terceros').innerHTML = finalPriceTerceros;
+    document.getElementById('precio-terceros-ampliado').innerHTML = finalPriceTercerosAmpliado;
+    document.getElementById('precio-franquicia').innerHTML = finalPriceFranquicia;
+    document.getElementById('precio-todo-riesgo').innerHTML = finalPriceTodoRiesgo;
   }
 
-  function calculateInsurance(){
-    let finalPrice = 0;
+  function calculateAge(date){
+    const birth = new Date(date);
+    const today = new Date();
 
-    if (datosUsuario.insurance.equals('terceros')){
-      finalPrice = 500;
-      finalPrice = addDriverAge(finalPrice);
-      finalPrice = addLicenseYears(finalPrice);
-      finalPrice = addVehicleType(finalPrice);
-      finalPrice = addVehicleAge(finalPrice);
+    let age = today.getFullYear() - birth.getFullYear();
+
+    const monthDiff = today.getMonth() - birth.getMonth();
+    const dayDiff = today.getDate() - birth.getDate();
+
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+      age--;
     }
-    if (datosUsuario.insurance.equals('terceros-ampliado')){
-      finalPrice = 650;
-      finalPrice = addDriverAge(finalPrice);
-      finalPrice = addLicenseYears(finalPrice);
-      finalPrice = addVehicleType(finalPrice);
-      finalPrice = addVehicleAge(finalPrice);
-    }
-    if (datosUsuario.insurance.equals('franquicia')){
-      finalPrice = 750;
-      finalPrice = addDriverAge(finalPrice);
-      finalPrice = addLicenseYears(finalPrice);
-      finalPrice = addVehicleType(finalPrice);
-      finalPrice = addVehicleAge(finalPrice);
-    }
-    if (datosUsuario.insurance.equals('todo-riesgo')){
-      finalPrice = 1000;
-      finalPrice = addDriverAge(finalPrice);
-      finalPrice = addLicenseYears(finalPrice);
-      finalPrice = addVehicleType(finalPrice);
-      finalPrice = addVehicleAge(finalPrice);
-    }
 
-    return finalPrice;
+    return age;
   }
 
-  function calculateAge(){
-
-  }
-
-  function calculateLicenseAge(){
-
-  }
-
-  function calculateCarAge(){
-
-  }
 
   function addDriverAge(price){
     if (calculateAge(datosUsuario.fechaNacimiento) > 25){
@@ -898,7 +982,7 @@ VALIDACIONES :
   }
 
   function addLicenseYears(price){
-    if (calculateLicenseAge(datosUsuario.carnet.fecha) > 5){
+    if (calculateAge(datosUsuario.carnet.fecha) > 5){
       return (price - price * 0.1);
     }
     else{
@@ -908,28 +992,68 @@ VALIDACIONES :
 
   function addVehicleType(price){
     let tipo = datosUsuario.vehiculo.tipo;
-    if (tipo.equals('other')){
+    if (tipo == 'other'){
       return price;
     }
-    if (tipo.equals('coupe')){
+    if (tipo == 'coupe'){
       return (price + price * 0.2);
     }
-    if (tipo.equals('suv')){
+    if (tipo == 'suv' ){
       return (price + price * 0.15);
     }
-    if (tipo.equals('sedan')){
+    if (tipo =='sedan'){
       return (price + price * 0.05);
     }
   }
 
   function addVehicleAge(price){
-    if (calculateCarAge(datosUsuario.vehiculo.matriculacion) >= 10){
-        return price + (price * (0.01 * (calculateCarAge(datosUsuario.vehiculo.matriculacion))));
+    if (calculateAge(datosUsuario.vehiculo.matriculacion) >= 10){
+        return price + (price * (0.01 * (calculateAge(datosUsuario.vehiculo.matriculacion))));
         }
         else{
         return price;
     }
   }
+
+
+
+  //REGEX
+  const nombreApellidoRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{1,30}$/;
+  const dniRegex = /^[0-9]{8}[A-Z]$/;
+  const matriculaRegex = /^[0-9]{4}-[A-Z]{3}$/;
+  const matriculaAntiguaRegex = /^[A-Z]{1,2}\d{4}[A-Z]{2}$/
+  const postalCodeRegex = /^[0-9]{5}$/;
+  const jpgFileRegex = /\.jpg$/i;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+
+
+
+  const validateFechaNacimiento = (birthDate) => {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    const age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+    const dayDiff = today.getDate() - birth.getDate();
+
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+      return age - 1 >= 18;
+    }
+    return age >= 18;
+  };
+
+  const validateFechaCarnet = (date) => {
+    const today = new Date();
+    const inputDate = new Date(date);
+    return inputDate <= today;
+  };
+
+  const validateFechaMatriculacion = (date) => {
+    const today = new Date();
+    const inputDate = new Date(date);
+    return inputDate <= today;
+  };
+
 
 </script>
 
